@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button) findViewById(R.id.button);
         final EditText editText = (EditText) findViewById(R.id.edit_text);
         final ImageView imageView = (ImageView) findViewById(R.id.image_view);
+        final ProgressBar progressBar =(ProgressBar)findViewById(R.id.progress_bar);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,8 +63,19 @@ public class MainActivity extends AppCompatActivity {
                         /*****ProgressDialog end *****/
 
                         /**************ImageView begin******************/
-                        imageView.setImageResource(R.drawable.image2);
+                       /* imageView.setImageResource(R.drawable.image2);*/
                         /**************ImageView end******************/
+
+                        /*****************ProgressBar begin***************************/
+                            /*if(progressBar.getVisibility()==View.GONE){
+                                progressBar.setVisibility(View.VISIBLE);
+                            }else {
+                                progressBar.setVisibility(View.GONE);
+                            }*/
+                            int progress = progressBar.getProgress();
+                            progress = progress + 10;
+                            progressBar.setProgress(progress);
+                        /******************ProgressBar end**************************/
                         break;
                     default:
                         break;
