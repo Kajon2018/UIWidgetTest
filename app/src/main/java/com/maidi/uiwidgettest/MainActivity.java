@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button button = (Button) findViewById(R.id.button);
         final EditText editText = (EditText) findViewById(R.id.edit_text);
+        final ImageView imageView = (ImageView) findViewById(R.id.image_view);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,13 +53,17 @@ public class MainActivity extends AppCompatActivity {
                         /*****AlertDialog end *****/
 
                         /*****ProgressDialog begin *****/
+                        /*
                         ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
                         progressDialog.setTitle("This is ProgressDialog");
                         progressDialog.setMessage("loading...");
                         progressDialog.setCancelable(true);
-                        progressDialog.show();
+                        progressDialog.show();*/
                         /*****ProgressDialog end *****/
 
+                        /**************ImageView begin******************/
+                        imageView.setImageResource(R.drawable.image2);
+                        /**************ImageView end******************/
                         break;
                     default:
                         break;
